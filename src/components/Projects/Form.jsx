@@ -156,7 +156,18 @@ function Form({ formData, handleInputChange, errors, fetchError, handleFetch, pr
       </fieldset>
       <div className="container--link">
         {projectUrl && <a href={projectUrl} target="_blank" rel="noopener noreferrer" className="link">Clica aquí para ver tu proyecto</a>}
-        {fetchError ? <p>{fetchError.replace('Mandatory fields: name, slogan, technologies, demo, repo, desc, autor, job, image, photo', 'Error de envío: El formulario no se ha cumplimentado correctamente')}</p> : null}
+        {fetchError ? <p>{fetchError.replace('Mandatory fields: ', 'Error de envío de los campos: ')
+        .replace('name', 'Nombre del proyecto')
+        .replace('slogan', 'Slogan')
+        .replace('technologies','tecnologías')
+        .replace('demo', 'Demo')
+        .replace('repo','Repositorio')
+        .replace('desc','Descripción')
+        .replace('autor', 'Nombre de la autora')
+        .replace('job', 'Trabajo de la autora')
+        .replace('image', 'Foto del proyecto')
+        .replace('photo', 'Foto del autor')}
+        </p> : null}
       </div>
     </form>
   );
