@@ -1,6 +1,6 @@
 import Hero from "../Layout/Hero";
 import { Link } from "react-router";
-import landingImage from "../../images/cool-project.png";
+import landingImage from "../../../public/cool-project.png";
 
 function Landing() {
   return (
