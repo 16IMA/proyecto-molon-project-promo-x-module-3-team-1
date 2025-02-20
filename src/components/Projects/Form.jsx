@@ -141,12 +141,12 @@ function Form({ formData, handleInputChange, errors, fetchError, handleFetch, pr
 
       <fieldset className="addForm__group--upload">
         <div>
-          <GetAvatar updateAvatar={updatePhoto} text="Subir foto del proyecto" />
-          {errors.photo && <p className="error">{errors.photo}</p>}
+          <GetAvatar updateAvatar={updateImage} text="Subir foto del proyecto" />
+          {errors.photo && <p className="error">{errors.image}</p>}
         </div>
         <div>
-          <GetAvatar updateAvatar={updateImage} text="Subir foto de la autora" />
-          {errors.image && <p className="error">{errors.image}</p>}
+          <GetAvatar updateAvatar={updatePhoto} text="Subir foto de la autora" />
+          {errors.image && <p className="error">{errors.photo}</p>}
         </div>
         <div>
           <button className="button--large" onClick={handleFetch}>
